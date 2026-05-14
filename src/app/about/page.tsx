@@ -7,49 +7,145 @@ export default function About() {
     "Collaboration", "Growth", "Community"
   ];
 
+  const timelineData = [
+    {
+      level: "100 Level",
+      items: [
+        { id: "101", role: "Member", org: "YALI Network Oyo State", desc: "Participated in youth leadership and community development initiatives." },
+        { id: "102", role: "Member", org: "NACOS Social Committee", desc: "Supported student engagement and departmental activities." },
+        { id: "103", role: "Member", org: "NACOS Representative Council", desc: "Represented student interests and contributed to departmental decision-making." },
+        { id: "104", role: "Volunteer", org: "Innotech 2.0", desc: "Assisted in organizing and coordinating innovation-focused student events." },
+        { id: "105", role: "Volunteer", org: "Ibadan Student Tech Fest", desc: "Supported event operations and community engagement activities." },
+      ]
+    },
+    {
+      level: "200 Level",
+      items: [
+        { id: "201", role: "PRO", org: "Dept. of Computer Science, UI", desc: "Led departmental publicity and communication efforts. Organized student-focused events and campaigns." },
+        { id: "202", role: "Ambassador", org: "Helix BioGen Institute, UI", desc: "Represented the institute and promoted biotechnology and innovation programs." },
+        { id: "203", role: "Member", org: "Postman Student Community", desc: "Engaged in API development and developer community activities." },
+        { id: "204", role: "Media Team Lead", org: "Tech Fusion", desc: "Coordinated media operations, photography, and digital communication for classroom-to-career initiatives." },
+        { id: "205", role: "Founder", org: "GiT Community (Grow in Tech)", desc: "Founded a student-focused tech growth community promoting mentorship and technical development." },
+      ]
+    },
+    {
+      level: "300 Level",
+      items: [
+        { id: "301", role: "General Secretary", org: "FASSA UI", desc: "Managed official documentation, communication, and administrative coordination for the Faculty of Science." },
+        { id: "302", role: "Vice President", org: "Students Against Pollution Nigeria", desc: "Supported advocacy, environmental awareness, and student outreach activities." },
+        { id: "303", role: "Chairman", org: "Innotech 4.0", desc: "Led planning and execution of large-scale innovation programs, hackathons, and accelerators." },
+        { id: "304", role: "Workshop Organizer", org: "Web3/Crypto", desc: "Coordinated workshops introducing students to blockchain and developer onboarding." },
+      ]
+    },
+    {
+      level: "400 Level",
+      items: [
+        { id: "401", role: "Campus Ambassador", org: "Futurize / Finna / Infinix", desc: "Promoted innovation and brand engagement through marketing campaigns on campus." },
+        { id: "402", role: "Member", org: "NACOS Social Committee", desc: "Continued contributing to student engagement and departmental community activities." },
+      ]
+    }
+  ];
+
   return (
     <div className="flex flex-col gap-20 md:gap-32 pb-24 pt-10 md:pt-20">
       
       {/* Intro Section */}
-      <section className="px-6 max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-        <div className="relative aspect-[4/5] w-full max-w-sm mx-auto md:mx-0">
+      <section className="px-6 max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+        <div className="relative aspect-[4/5] w-full max-w-sm mx-auto md:mx-0 sticky top-32">
           <div className="absolute inset-0 bg-brand-neon-green/10 -translate-x-3 md:-translate-x-4 translate-y-3 md:translate-y-4 rounded-[4px] border border-brand-neon-green/30" />
-          <img src="/photos/relaxed-portrait.png" alt="Obioma Relaxed Portrait" className="relative w-full h-full object-cover rounded-[4px] grayscale mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
+          <img src="/photos/relaxed-portrait.png" alt="Obioma Relaxed Portrait" className="relative w-full h-full object-cover rounded-[4px] grayscale hover:grayscale-0 transition-all duration-700" />
         </div>
-        <div className="space-y-4 md:space-y-6">
-          <h1 className="font-orbitron font-bold text-3xl md:text-4xl text-brand-cyan">
-            Meet Obioma <br className="hidden md:block" /><span className="text-brand-text-primary">Kennedy Ezeocha</span>
-          </h1>
-          <div className="font-mono text-brand-neon-green text-xs md:text-sm opacity-70 uppercase tracking-wider mb-4 md:mb-6">
-            &lt;h3&gt; Candidate Intro &lt;/h3&gt;
+        <div className="space-y-6 md:space-y-8">
+          <div className="space-y-4">
+            <h1 className="font-orbitron font-black text-3xl md:text-5xl text-brand-cyan leading-tight">
+              Obioma <br /><span className="text-brand-text-primary">Kennedy Ezeocha</span>
+            </h1>
+            <div className="font-mono text-brand-neon-green text-xs md:text-sm font-bold uppercase tracking-widest border-l-2 border-brand-neon-green pl-4">
+              Leadership • Technology • Community • Strategy
+            </div>
           </div>
-          <p className="font-sans text-brand-text-primary text-base md:text-lg leading-relaxed font-light">
-            I am a student of the Faculty of Computing and an active member
-            of the NACOS UI community. Over the years, I have contributed
-            through student initiatives, innovation programs, volunteering,
-            teaching, and projects across different positions I have held.
+          
+          <p className="font-sans text-brand-text-primary text-base md:text-xl leading-relaxed font-light">
+            I am a third-year Computer Science student at the University of Ibadan with experience spanning 
+            <span className="text-brand-neon-green"> technology leadership, product management, and community building.</span>
           </p>
+          
+          <p className="font-sans text-brand-text-muted text-base md:text-lg leading-relaxed font-light">
+            Passionate about building impactful systems, empowering student communities, and driving innovation across Africa. 
+            My journey through NACOS and the tech ecosystem has been about one thing: 
+            <span className="text-brand-cyan"> helping people grow by building better systems.</span>
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 pt-4">
+            {values.map((value) => (
+              <div key={value} className="bg-brand-bg-secondary border border-brand-neon-green/10 rounded-[2px] p-3 flex items-center gap-2 hover:border-brand-neon-green/40 transition-colors">
+                <span className="font-mono text-brand-neon-green font-bold text-xs">#</span>
+                <span className="font-mono text-brand-text-primary text-[10px] md:text-xs uppercase tracking-wider">{value}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Experience Timeline */}
       <section className="px-6 max-w-4xl mx-auto w-full">
-        <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-brand-cyan mb-8 md:mb-12 flex items-center gap-4">
-          <span className="text-brand-neon-green">#</span> Experience Log
+        <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-brand-cyan mb-12 flex items-center gap-4">
+          <span className="text-brand-neon-green font-mono tracking-tighter">git log --all</span>
         </h2>
-        <CommitTimeline />
+        <CommitTimeline data={timelineData} />
       </section>
 
-      {/* Values Section */}
-      <section className="px-6 max-w-6xl mx-auto w-full">
-        <div className="font-mono text-brand-neon-green text-xs md:text-sm opacity-70 uppercase tracking-wider mb-8 text-center">
-          &lt;!-- Core Values --&gt;
+      {/* Professional & Technical Experience */}
+      <section className="px-6 max-w-6xl mx-auto w-full space-y-12">
+        <div className="text-center space-y-4">
+          <h2 className="font-orbitron font-bold text-2xl md:text-4xl text-brand-text-primary uppercase tracking-widest">
+            Professional <span className="text-brand-neon-green">.exe</span>
+          </h2>
+          <p className="font-mono text-brand-text-muted text-xs md:text-sm">Technical Education & Product Strategy</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {values.map((value) => (
-            <div key={value} className="bg-brand-bg-secondary border border-brand-neon-green/20 rounded-[2px] p-4 flex items-center gap-3 transition-colors hover:border-brand-neon-green/50 hover:bg-brand-neon-green/5">
-              <span className="font-mono text-brand-neon-green font-bold text-xs md:text-sm">&gt;_</span>
-              <span className="font-mono text-brand-text-primary text-xs md:text-sm tracking-wide">{value}</span>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <TerminalCard title="Frontend Tutor & SMM">
+            <div className="space-y-4">
+              <div className="font-mono text-[10px] text-brand-neon-green uppercase mb-2">Linux Professional Institute (2025)</div>
+              <ul className="space-y-2 font-sans text-sm text-brand-text-muted list-inside">
+                <li className="flex gap-2"><span>&gt;</span> Mentored students in HTML, CSS, and JS</li>
+                <li className="flex gap-2"><span>&gt;</span> Managed digital communication & SEO strategy</li>
+                <li className="flex gap-2"><span>&gt;</span> Organized Hubbers Day event</li>
+              </ul>
+            </div>
+          </TerminalCard>
+
+          <TerminalCard title="Product & Strategy">
+            <div className="space-y-4">
+              <div className="font-mono text-[10px] text-brand-cyan uppercase mb-2">Cydex & Party Currency Project</div>
+              <ul className="space-y-2 font-sans text-sm text-brand-text-muted list-inside">
+                <li className="flex gap-2"><span>&gt;</span> Project/Product Management @ Cydex</li>
+                <li className="flex gap-2"><span>&gt;</span> Business Analyst for Digital Event Payment Platform</li>
+                <li className="flex gap-2"><span>&gt;</span> Requirement analysis & workflow structuring</li>
+              </ul>
+            </div>
+          </TerminalCard>
+        </div>
+      </section>
+
+      {/* Entrepreneurship & Community */}
+      <section className="px-6 max-w-6xl mx-auto w-full space-y-12">
+        <div className="text-center space-y-4">
+          <h2 className="font-orbitron font-bold text-2xl md:text-4xl text-brand-text-primary uppercase tracking-widest">
+            Ventures <span className="text-brand-yellow">&</span> Communities
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { title: "KARMA", desc: "Technology & creative agency focused on brand identity and software development." },
+            { title: "KENIME", desc: "Anime merchandise and culture brand focused on merchandise strategy and brand building." },
+            { title: "GiT Community", desc: "Student-focused tech growth community promoting mentorship and technical growth." }
+          ].map(venture => (
+            <div key={venture.title} className="bg-brand-bg-secondary border border-brand-neon-green/10 p-6 rounded-[2px] hover:border-brand-yellow/40 transition-all group">
+              <h3 className="font-orbitron font-bold text-xl text-brand-yellow mb-4 group-hover:scale-105 transition-transform">{venture.title}</h3>
+              <p className="font-sans text-sm text-brand-text-muted leading-relaxed">{venture.desc}</p>
             </div>
           ))}
         </div>
@@ -57,22 +153,14 @@ export default function About() {
 
       {/* Candidate Quote */}
       <section className="px-6 max-w-4xl mx-auto w-full">
-        <blockquote className="border-l-4 border-brand-neon-green pl-6 md:pl-8 py-4 bg-[linear-gradient(90deg,rgba(0,255,102,0.05),transparent)]">
-          <p className="font-orbitron text-xl md:text-3xl text-brand-text-primary leading-tight font-light">
+        <blockquote className="border-l-4 border-brand-neon-green pl-6 md:pl-8 py-8 bg-brand-bg-secondary relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-4 font-mono text-[60px] leading-none text-brand-neon-green opacity-5 select-none font-black">"</div>
+          <p className="font-orbitron text-xl md:text-3xl text-brand-text-primary leading-tight font-light relative z-10">
             "Leadership, to me, is not just about occupying a position.
             <br className="hidden md:block" />
             <span className="text-brand-cyan font-bold mt-2 inline-block">It is about building systems that continue to serve people."</span>
           </p>
         </blockquote>
-      </section>
-
-      {/* Photo Cluster */}
-      <section className="px-6 max-w-6xl mx-auto w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <img src="/photos/futurize-ambassador.png" alt="Student Ambassador" className="w-full aspect-square object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
-          <img src="/photos/cert-nacos-awards.png" alt="NACOS Awards" className="w-full aspect-square object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500 md:translate-y-12" />
-          <img src="/photos/seated-portrait.png" alt="Personal Portrait" className="w-full aspect-square object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
-        </div>
       </section>
 
     </div>

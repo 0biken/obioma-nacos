@@ -25,9 +25,9 @@ export default function Vision() {
       <section className="px-6 max-w-4xl mx-auto text-center">
         <p className="font-sans text-brand-text-primary text-lg md:text-2xl leading-relaxed font-light border border-brand-neon-green/20 p-6 md:p-12 bg-brand-bg-secondary rounded-[2px] relative">
           <span className="absolute top-2 left-2 md:top-4 md:left-4 text-brand-neon-green/30 font-mono text-3xl md:text-4xl leading-none">"</span>
-          My vision is to make NACOS UI a more intentional, innovative,
-          and opportunity-driven community where students are supported
-          academically, technically, socially, and professionally.
+          I am passionate about leveraging <span className="text-brand-neon-green">technology, leadership, and community-driven innovation</span> to create 
+          meaningful impact across education, entrepreneurship, and digital ecosystems in Africa. 
+          NACOS UI will be the engine for this change.
           <span className="absolute bottom-[-10px] right-2 md:right-4 text-brand-neon-green/30 font-mono text-3xl md:text-4xl leading-none">"</span>
         </p>
       </section>
