@@ -20,9 +20,9 @@ export default function Navbar() {
   return (
     <nav className="w-full border-b border-brand-neon-green/10 bg-brand-bg-primary/90 backdrop-blur-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-brand-bg-secondary border border-brand-neon-green/30 rounded flex items-center justify-center transition-all group-hover:border-brand-cyan/50 group-hover:shadow-[0_0_15px_rgba(0,255,204,0.3)]">
-            <span className="font-orbitron font-black text-brand-cyan text-sm">UI</span>
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-[2px] overflow-hidden border border-brand-neon-green/20 transition-all group-hover:border-brand-cyan/50 group-hover:shadow-[0_0_15px_rgba(49,255,230,0.3)] bg-white flex items-center justify-center p-1">
+            <img src="/photos/Nacos_logo.jpg" alt="NACOS UI Logo" className="w-full h-full object-contain" />
           </div>
           <div>
             <div className="font-orbitron font-bold text-lg text-brand-text-primary tracking-wide">NACOS</div>
