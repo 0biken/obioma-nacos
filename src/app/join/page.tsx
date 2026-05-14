@@ -7,7 +7,16 @@ export default function Join() {
     <div className="flex flex-col gap-20 md:gap-32 pb-24 pt-10 md:pt-20">
       
       {/* CTA Banner */}
-      <section className="px-6 max-w-4xl mx-auto w-full text-center">
+      <section className="px-6 max-w-4xl mx-auto w-full text-center flex flex-col items-center">
+        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-brand-neon-green/50 shadow-[0_0_20px_rgba(0,255,102,0.3)] mb-6 relative">
+          <Image 
+            src="/photos/relaxed-portrait.png" 
+            alt="Obioma Kennedy Ezeocha" 
+            fill
+            className="object-cover"
+            sizes="128px"
+          />
+        </div>
         <h1 className="font-orbitron font-black text-3xl md:text-6xl text-brand-cyan mb-6">
           Join the Movement
         </h1>

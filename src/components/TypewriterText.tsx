@@ -9,7 +9,7 @@ interface TypewriterTextProps {
   className?: string;
 }
 
-export default function TypewriterText({ text, speed = 80, delay = 0, onComplete, className = "" }: TypewriterTextProps) {
+export default function TypewriterText({ text, speed = 150, delay = 0, onComplete, className = "" }: TypewriterTextProps) {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {

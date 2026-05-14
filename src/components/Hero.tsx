@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="relative w-full aspect-square md:aspect-[4/5] lg:aspect-square flex justify-center items-center">
           <div className="absolute inset-0 bg-brand-neon-green/5 blur-[100px] rounded-full animate-pulse" />
           <div className={`relative w-full h-full border border-brand-neon-green/20 rounded-[4px] overflow-hidden transition-all duration-1000 ${stage >= 1 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
-            <div className="absolute top-0 left-0 w-full h-6 bg-brand-bg-secondary border-b border-brand-neon-green/20 flex items-center px-3 gap-2">
+            <div className="absolute top-0 left-0 w-full h-6 bg-brand-bg-secondary border-b border-brand-neon-green/20 flex items-center px-3 gap-2 z-10">
               <div className="w-2 h-2 rounded-full bg-[#FF5F6D]" />
               <div className="w-2 h-2 rounded-full bg-brand-yellow" />
               <div className="w-2 h-2 rounded-full bg-brand-neon-green" />
