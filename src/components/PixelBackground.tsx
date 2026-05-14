@@ -16,7 +16,6 @@ export default function PixelBackground() {
           inset: 0;
           pointer-events: none;
           z-index: 0;
-          background-color: #000;
           background-image:
             repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,255,156,0.07) 40px),
             repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,255,156,0.07) 40px);
