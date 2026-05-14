@@ -1,12 +1,53 @@
 import Link from "next/link";
 
+const LinkedinIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
+const InstagramIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
+
+const GithubIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+  </svg>
+);
+
+const XIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+  </svg>
+);
+
+const TikTokIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+    <path d="M14 4c0 2.5 2 5 5 5" />
+  </svg>
+);
+
+const SnapchatIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M11.99 2C8.55 2 6 4.7 6 8c0 1.5.5 2.5 1 3-1 0-2-.5-3-.5-.5 0-.8.3-.8.6 0 .5.4.8.8.8 1.5 0 2.5.5 3.2 1.5-.5.8-1 1.5-1 2.5 0 1 .5 1.5 1 1.5.2 0 .5-.1.8-.2.8.6 1.8 1.2 3 1.2s2.2-.6 3-1.2c.3.1.6.2.8.2.5 0 1-.5 1-1.5 0-1-.5-1.7-1-2.5.7-1 1.7-1.5 3.2-1.5.4 0 .8-.3.8-.8 0-.3-.3-.6-.8-.6-1 0-2 .5-3 .5.5-.5 1-1.5 1-3 0-3.3-2.55-6-5.99-6Z" />
+  </svg>
+);
+
 const socials = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/obioma-ezeocha-590923353/", icon: "in" },
-  { label: "Instagram", href: "https://www.instagram.com/obi.ken_360/", icon: "ig" },
-  { label: "X / Twitter", href: "https://x.com/obioma_ezeocha", icon: "𝕏" },
-  { label: "TikTok", href: "https://www.tiktok.com/@yourfavoritetechweeb", icon: "tt" },
-  { label: "Snapchat", href: "https://www.snapchat.com/add/obiken_360", icon: "sc" },
-  { label: "GitHub", href: "https://github.com/0biken", icon: "gh" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/obioma-ezeocha-590923353/", icon: <LinkedinIcon /> },
+  { label: "Instagram", href: "https://www.instagram.com/obi.ken_360/", icon: <InstagramIcon /> },
+  { label: "X / Twitter", href: "https://x.com/obioma_ezeocha", icon: <XIcon /> },
+  { label: "TikTok", href: "https://www.tiktok.com/@yourfavoritetechweeb", icon: <TikTokIcon /> },
+  { label: "Snapchat", href: "https://www.snapchat.com/add/obiken_360", icon: <SnapchatIcon /> },
+  { label: "GitHub", href: "https://github.com/0biken", icon: <GithubIcon /> },
 ];
 
 const links = [
