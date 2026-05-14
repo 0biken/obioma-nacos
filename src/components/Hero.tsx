@@ -57,12 +57,12 @@ export default function Hero() {
             </div>
             {/* We assume images are placed in public/images/ */}
             <div className="w-full h-full bg-brand-bg-secondary pt-6 flex items-center justify-center relative">
-              <Image 
-                src="/photos/relaxed-portrait.png" 
-                alt="Obioma Kennedy Ezeocha" 
+              <Image
+                src="/photos/whatsapp-profile.jpeg"
+                alt="Obioma Kennedy Ezeocha"
                 fill
                 priority
-                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-500 opacity-80" 
+                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-500 opacity-80"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
