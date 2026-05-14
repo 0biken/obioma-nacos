@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #030D07;
+  --bg-secondary: #041A0A;
+  --bg-surface: #0A2E14;
+  --neon-green: #00FF66;
+  --cyan: #00FFCC;
+  --yellow: #FFE600;
+  --text-primary: #E0FFE8;
+  --text-muted: #7AAD88;
+}
+
+@theme inline {
+  --color-brand-bg-primary: var(--bg-primary);
+  --color-brand-bg-secondary: var(--bg-secondary);
+  --color-brand-bg-surface: var(--bg-surface);
+  --color-brand-neon-green: var(--neon-green);
+  --color-brand-cyan: var(--cyan);
+  --color-brand-yellow: var(--yellow);
+  --color-brand-text-primary: var(--text-primary);
+  --color-brand-text-muted: var(--text-muted);
+
+  --font-orbitron: var(--font-orbitron), monospace;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
