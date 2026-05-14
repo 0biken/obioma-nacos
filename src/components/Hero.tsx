@@ -19,30 +19,46 @@ export default function Hero() {
           </div>
 
           <h1 className="font-orbitron font-black text-5xl md:text-7xl leading-[1.1]">
-            <TypewriterText text="Compiling" className="text-brand-cyan block" onComplete={() => setStage(1)} />
+            <TypewriterText text="Compiling " className="text-brand-cyan" onComplete={() => setStage(1)} />
             {stage >= 1 && (
-              <span className="flex">
-                <TypewriterText text="the Future" className="text-brand-yellow" onComplete={() => setStage(2)} />
+              <TypewriterText text="the " className="text-brand-red" onComplete={() => setStage(2)} />
+            )}
+            {stage >= 2 && (
+              <span className="inline-flex">
+                <TypewriterText text="Future" className="text-brand-yellow" onComplete={() => setStage(3)} />
                 <span className="text-brand-neon-green animate-[pulse_1s_step-end_infinite]">_</span>
               </span>
             )}
-            {stage === 0 && <span className="text-brand-neon-green animate-[pulse_1s_step-end_infinite]">_</span>}
+            {stage < 2 && <span className="text-brand-neon-green animate-[pulse_1s_step-end_infinite]">_</span>}
           </h1>
 
-          <div className={`transition-opacity duration-1000 ${stage >= 2 ? "opacity-100" : "opacity-0"}`}>
-            <p className="font-sans text-brand-text-primary text-lg leading-relaxed max-w-xl font-light">
+          <div className={`transition-opacity duration-1000 ${stage >= 3 ? "opacity-100" : "opacity-0"}`}>
+            <p className="font-mono text-brand-text-muted text-xs md:text-sm mb-2 opacity-50">&lt;p&gt;</p>
+            <p className="font-sans text-brand-text-primary text-lg leading-relaxed max-w-xl font-light pl-4 border-l border-brand-neon-green/20">
               Obioma Kennedy Ezeocha is running to serve as the next President
               of NACOS UI — not just to lead, but to help build what comes next.
             </p>
+            <p className="font-mono text-brand-text-muted text-xs md:text-sm mt-2 opacity-50">&lt;/p&gt;</p>
           </div>
 
-          <div className={`flex flex-wrap gap-4 mt-4 transition-all duration-700 delay-300 ${stage >= 2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-            <NeonButton href="/join" variant="primary">
-              [ Join the Movement ]
-            </NeonButton>
-            <NeonButton href="/vision" variant="secondary">
-              [ Read My Vision ]
-            </NeonButton>
+          <div className={`flex flex-col gap-4 mt-2 transition-all duration-700 delay-300 ${stage >= 3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+            <div>
+              <p className="font-mono text-brand-text-muted text-xs md:text-sm mb-2 opacity-50">&lt;a href=&quot;/join&quot;&gt;</p>
+              <div className="pl-4 border-l border-brand-neon-green/20 flex gap-4">
+                <NeonButton href="/join" variant="primary">
+                  [ Join the Movement ]
+                </NeonButton>
+                <NeonButton href="/vision" variant="secondary">
+                  [ Read My Vision ]
+                </NeonButton>
+              </div>
+              <p className="font-mono text-brand-text-muted text-xs md:text-sm mt-2 opacity-50">&lt;/a&gt;</p>
+            </div>
+            
+            <div className="mt-4 inline-block bg-brand-neon-green text-[#030807] font-bold font-mono text-sm px-4 py-3 border-l-4 border-white shadow-[0_0_20px_rgba(0,255,156,0.2)]">
+              <div className="hover:text-white transition-colors duration-300">#OBIOMAFOR001</div>
+              <div className="hover:text-white transition-colors duration-300">#FORTHEGOODOFNACOS</div>
+            </div>
           </div>
         </div>
 

@@ -65,6 +65,26 @@ export default function PixelBackground() {
 
       {/* Layer 3: Floating ## Hash Mark */}
       <div className="pixel-hash">##<br />##</div>
+
+      {/* Layer 4: Chunky Pixel Accents (Site-wide) */}
+      <div className="fixed top-[20%] left-[5%] w-8 h-8 bg-brand-neon-green/10 grid grid-cols-2 grid-rows-2 gap-[2px] pointer-events-none z-0">
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/20"></div>
+      </div>
+      
+      <div className="fixed bottom-[15%] right-[10%] w-12 h-12 bg-transparent grid grid-cols-3 grid-rows-3 gap-[2px] pointer-events-none z-0 opacity-40">
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/20"></div>
+      </div>
     </>
   );
 }
