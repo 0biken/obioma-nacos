@@ -66,14 +66,18 @@ export default function About() {
           </div>
           
           <p className="font-sans text-brand-text-primary text-base md:text-xl leading-relaxed font-light">
-            I am a third-year Computer Science student at the University of Ibadan with experience spanning 
-            <span className="text-brand-neon-green"> technology leadership, product management, and community building.</span>
+            Hi, I&apos;m Obioma, a 400-level Computer Science student at the University of Ibadan and a passionate student leader 
+            within the Nigeria Association of Computing Students community. My leadership journey began in 200L as the 
+            Public Relations Officer (PRO) of the Department of Computer Science, where I focused on student engagement, 
+            communication, and community visibility. In 300L, I served as the General Secretary of FASSA, 
+            representing students and supporting faculty-wide coordination and administration.
           </p>
           
           <p className="font-sans text-brand-text-muted text-base md:text-lg leading-relaxed font-light">
-            Passionate about building impactful systems, empowering student communities, and driving innovation across Africa. 
-            My journey through NACOS and the tech ecosystem has been about one thing: 
-            <span className="text-brand-cyan"> helping people grow by building better systems.</span>
+            Beyond leadership, I&apos;m deeply passionate about technology, innovation, and community building. 
+            I believe leadership is about creating impact, amplifying student voices, and building opportunities that help others grow. 
+            Through every role and initiative I&apos;ve been part of, my mission has remained the same: 
+            <span className="text-brand-cyan font-normal"> to serve, connect people, and contribute meaningfully to the growth of our community.</span>
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 pt-4">
@@ -120,7 +124,7 @@ export default function About() {
             <div className="space-y-4">
               <div className="font-mono text-[10px] text-brand-cyan uppercase mb-2">Cydex & Party Currency Project</div>
               <ul className="space-y-2 font-sans text-sm text-brand-text-muted list-inside">
-                <li className="flex gap-2"><span>&gt;</span> Project/Product Management @ Cydex</li>
+                <li className="flex gap-2"><span>&gt;</span> Project/Product Management with Cydex</li>
                 <li className="flex gap-2"><span>&gt;</span> Business Analyst for Digital Event Payment Platform</li>
                 <li className="flex gap-2"><span>&gt;</span> Requirement analysis & workflow structuring</li>
               </ul>

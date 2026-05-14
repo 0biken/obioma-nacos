@@ -43,7 +43,7 @@ export default function CommitTimeline({ data }: { data: LevelGroup[] }) {
                   </div>
                   
                   <div className="font-sans font-bold text-base md:text-lg text-brand-text-primary tracking-tight">
-                    {item.role} <span className="text-brand-cyan font-light mx-2">@</span> {item.org}
+                    {item.role} <span className="text-brand-cyan/40 font-light mx-2">|</span> {item.org}
                   </div>
                   
                   {item.desc && (
