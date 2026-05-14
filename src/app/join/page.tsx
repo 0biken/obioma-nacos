@@ -3,22 +3,22 @@ import NeonButton from "@/components/NeonButton";
 
 export default function Join() {
   return (
-    <div className="flex flex-col gap-32 pb-24 pt-20">
+    <div className="flex flex-col gap-20 md:gap-32 pb-24 pt-10 md:pt-20">
       
       {/* CTA Banner */}
       <section className="px-6 max-w-4xl mx-auto w-full text-center">
-        <h1 className="font-orbitron font-black text-4xl md:text-6xl text-brand-cyan mb-6">
+        <h1 className="font-orbitron font-black text-3xl md:text-6xl text-brand-cyan mb-6">
           Join the Movement
         </h1>
-        <p className="font-sans text-brand-text-primary text-xl font-light mb-12">
+        <p className="font-sans text-brand-text-primary text-lg md:text-xl font-light mb-10 md:mb-12">
           Join the campaign community and help us build what comes next.
         </p>
         
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-          <NeonButton href="https://chat.whatsapp.com/ECgFFW878vr5f1ufmBPhBE" variant="whatsapp" className="w-full sm:w-auto">
+          <NeonButton href="https://chat.whatsapp.com/ECgFFW878vr5f1ufmBPhBE" variant="whatsapp" className="w-full sm:w-auto text-sm md:text-base">
             [ Join WhatsApp Group ]
           </NeonButton>
-          <NeonButton href="#volunteer" variant="primary" className="w-full sm:w-auto">
+          <NeonButton href="#volunteer" variant="primary" className="w-full sm:w-auto text-sm md:text-base">
             [ Volunteer ]
           </NeonButton>
         </div>

@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PixelBackground from "@/components/PixelBackground";
+import MobileNav from "@/components/MobileNav";
 
 export default function RootLayout({
   children,
@@ -41,7 +42,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-brand-bg-primary text-brand-text-primary font-sans relative selection:bg-brand-neon-green selection:text-brand-bg-primary">
         <PixelBackground />
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pb-20 md:pb-0">{children}</main>
+        <MobileNav />
         <Footer />
       </body>
     </html>

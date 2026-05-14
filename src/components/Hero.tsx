@@ -7,10 +7,10 @@ export default function Hero() {
   const [stage, setStage] = useState(0);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center px-6 pt-10 pb-20 overflow-hidden">
+    <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center px-6 pt-10 pb-20 md:py-20 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))] pointer-events-none z-[-1]" />
       
-      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Text Column */}
         <div className="flex flex-col gap-6">
           <div className="animate-[fadeIn_0.4s_ease-out_forwards]">

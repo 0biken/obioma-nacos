@@ -50,10 +50,18 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
-        <button className="md:hidden text-brand-neon-green" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Mobile Actions */}
+        <div className="flex items-center gap-4 md:hidden">
+          <Link
+            href="/join"
+            className="font-mono text-[10px] text-brand-bg-primary bg-brand-neon-green px-3 py-2 rounded-[2px] font-bold shadow-[0_0_10px_rgba(0,255,102,0.3)]"
+          >
+            JOIN
+          </Link>
+          <button className="text-brand-neon-green" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
