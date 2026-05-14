@@ -1,39 +1,112 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #030D07;
-  --bg-secondary: #041A0A;
-  --bg-surface: #0A2E14;
-  --neon-green: #00FF66;
-  --cyan: #00FFCC;
-  --yellow: #FFE600;
-  --text-primary: #E0FFE8;
-  --text-muted: #7AAD88;
+  /* === v2.0 Color Tokens === */
+  --bg-primary:     #030807;
+  --bg-secondary:   #061A14;
+  --bg-surface:     #0A2E14;
+  --bg-pure-black:  #000000;
+
+  --neon-green:     #00FF9C;
+  --deep-green:     #00B86B;
+  --cyan:           #31FFE6;
+  --yellow:         #FFD84D;
+  --red-accent:     #FF5F6D;
+
+  --text-primary:   #F5F7F7;
+  --text-muted:     #A7B5B0;
+  --text-label:     #4A7A58;
+
+  --border-glow:    rgba(0, 255, 156, 0.15);
+  --border-active:  rgba(0, 255, 156, 0.5);
+  --grid-opacity:   0.07;
 }
 
 @theme inline {
-  --color-brand-bg-primary: var(--bg-primary);
-  --color-brand-bg-secondary: var(--bg-secondary);
-  --color-brand-bg-surface: var(--bg-surface);
-  --color-brand-neon-green: var(--neon-green);
-  --color-brand-cyan: var(--cyan);
-  --color-brand-yellow: var(--yellow);
-  --color-brand-text-primary: var(--text-primary);
-  --color-brand-text-muted: var(--text-muted);
+  --color-brand-bg-primary:    var(--bg-primary);
+  --color-brand-bg-secondary:  var(--bg-secondary);
+  --color-brand-bg-surface:    var(--bg-surface);
+  --color-brand-bg-black:      var(--bg-pure-black);
+  --color-brand-neon-green:    var(--neon-green);
+  --color-brand-deep-green:    var(--deep-green);
+  --color-brand-cyan:          var(--cyan);
+  --color-brand-yellow:        var(--yellow);
+  --color-brand-red:           var(--red-accent);
+  --color-brand-text-primary:  var(--text-primary);
+  --color-brand-text-muted:    var(--text-muted);
+  --color-brand-text-label:    var(--text-label);
+  --color-brand-border-glow:   var(--border-glow);
 
   --font-orbitron: var(--font-orbitron), monospace;
-  --font-sans: var(--font-inter), sans-serif;
-  --font-mono: var(--font-mono), monospace;
+  --font-sans:     var(--font-inter), sans-serif;
+  --font-mono:     var(--font-mono), monospace;
 }
 
+/* === Base === */
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
 
+/* === Moving Grid Animation === */
+@keyframes moveGrid {
+  from { background-position: 0 0; }
+  to   { background-position: 0 40px; }
+}
+
+@keyframes floatHash {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* === Neon Glow Utilities === */
+.glow-green {
+  box-shadow: 0 0 20px rgba(0, 255, 156, 0.35), 0 0 40px rgba(0, 255, 156, 0.12);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(49, 255, 230, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 156, 0.8), 0 0 30px rgba(0, 255, 156, 0.4);
+}
+
+/* === WhatsApp Pulse === */
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 156, 0.3); }
+  50%       { box-shadow: 0 0 25px rgba(0, 255, 156, 0.7), 0 0 50px rgba(0, 255, 156, 0.3); }
+}
+
+.wa-pulse {
+  animation: waPulse 3s ease-in-out infinite;
+}
+
+/* === Reduced Motion === */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* === Phase 2 — Light Mode (prep, not active) === */
+[data-theme="light"] {
+  --bg-primary:    #F0F5F0;
+  --bg-secondary:  #E2EDE2;
+  --bg-surface:    #D4E8D4;
+  --neon-green:    #00A86B;
+  --deep-green:    #007A4D;
+  --cyan:          #0097A7;
+  --yellow:        #B8860B;
+  --red-accent:    #C0392B;
+  --text-primary:  #0A1A0A;
+  --text-muted:    #3D5A3D;
+  --text-label:    #2D5A2D;
+  --border-glow:   rgba(0, 100, 60, 0.2);
+  --grid-opacity:  0.04;
+}
+
+[data-theme="light"] .hero-headline {
+  text-shadow: none;
 }

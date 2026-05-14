@@ -5,39 +5,60 @@ interface NeonButtonProps {
   children: ReactNode;
   href?: string;
   onClick?: () => void;
-  variant?: "primary" | "secondary" | "danger" | "whatsapp";
+  variant?: "primary" | "secondary" | "ghost" | "danger" | "whatsapp";
   className?: string;
 }
 
 export default function NeonButton({ children, href, onClick, variant = "primary", className = "" }: NeonButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-mono text-sm tracking-wide transition-all duration-300 rounded-[2px] px-5 py-3 hover:scale-[1.02] active:scale-[0.98]";
+  const baseClasses = "inline-flex items-center justify-center font-mono text-sm tracking-[1px] uppercase transition-all duration-300 rounded-[2px] px-5 py-3 hover:scale-[1.02] active:scale-[0.98] cursor-pointer";
   
   let variantClasses = "";
   switch (variant) {
     case "primary":
-      variantClasses = "bg-brand-neon-green text-brand-bg-primary border border-brand-neon-green shadow-[0_0_15px_rgba(0,255,102,0.3)] hover:shadow-[0_0_25px_rgba(0,255,102,0.5)]";
+      // Solid neon green fill — primary CTA
+      variantClasses = "text-[#030807] font-bold";
       break;
     case "secondary":
-      variantClasses = "bg-brand-neon-green/10 text-brand-neon-green border border-brand-neon-green/30 hover:bg-brand-neon-green/20 hover:border-brand-neon-green/60 hover:shadow-[0_0_15px_rgba(0,255,102,0.2)]";
+      // Transparent, neon green border
+      variantClasses = "text-brand-neon-green border border-brand-neon-green/40 hover:border-brand-neon-green hover:bg-brand-neon-green/10";
+      break;
+    case "ghost":
+      // Transparent, cyan border — tertiary
+      variantClasses = "text-brand-cyan border border-brand-cyan/40 hover:border-brand-cyan hover:bg-brand-cyan/10";
       break;
     case "danger":
-      variantClasses = "bg-[#FF5F6D] text-white border border-[#FF5F6D] shadow-[0_0_15px_rgba(255,95,109,0.3)] hover:shadow-[0_0_25px_rgba(255,95,109,0.5)]";
+      variantClasses = "text-white border border-[#FF5F6D] bg-[#FF5F6D]/10 hover:bg-[#FF5F6D]/20";
       break;
     case "whatsapp":
-      variantClasses = "bg-[#25D366] text-white border border-[#25D366] shadow-[0_0_15px_rgba(37,211,102,0.3)] hover:shadow-[0_0_25px_rgba(37,211,102,0.5)] animate-[pulse_3s_ease-in-out_infinite]";
+      // Neon green with pulsing glow — matches WhatsApp entry in brand guide
+      variantClasses = "text-[#030807] font-bold wa-pulse";
       break;
   }
 
+  // Shared inline styles per variant for precise v2.0 glow values
+  const getStyle = (): React.CSSProperties => {
+    if (variant === "primary") {
+      return {
+        backgroundColor: "var(--neon-green, #00FF9C)",
+        boxShadow: "0 0 20px rgba(0,255,156,0.35), 0 0 40px rgba(0,255,156,0.12)",
+      };
+    }
+    if (variant === "whatsapp") {
+      return { backgroundColor: "var(--neon-green, #00FF9C)" };
+    }
+    return {};
+  };
+
   if (href) {
     return (
-      <Link href={href} className={`${baseClasses} ${variantClasses} ${className}`}>
+      <Link href={href} className={`${baseClasses} ${variantClasses} ${className}`} style={getStyle()}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button onClick={onClick} className={`${baseClasses} ${variantClasses} ${className}`}>
+    <button onClick={onClick} className={`${baseClasses} ${variantClasses} ${className}`} style={getStyle()}>
       {children}
     </button>
   );
