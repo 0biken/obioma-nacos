@@ -167,6 +167,24 @@ export default function About() {
         </blockquote>
       </section>
 
+      {/* Photo Cluster */}
+      <section className="px-6 max-w-6xl mx-auto w-full pt-12 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="space-y-4">
+            <img src="/photos/futurize-ambassador.png" alt="Student Ambassador" className="w-full aspect-square object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
+            <p className="font-mono text-[10px] text-brand-neon-green/60 uppercase text-center tracking-widest">&gt; Futurize Ambassador Role</p>
+          </div>
+          <div className="space-y-4 md:translate-y-12">
+            <img src="/photos/cert-nacos-awards.png" alt="NACOS Awards" className="w-full aspect-square object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
+            <p className="font-mono text-[10px] text-brand-neon-green/60 uppercase text-center tracking-widest">&gt; NACOS Recognition</p>
+          </div>
+          <div className="space-y-4">
+            <img src="/photos/seated-portrait.png" alt="Personal Portrait" className="w-full aspect-square object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
+            <p className="font-mono text-[10px] text-brand-neon-green/60 uppercase text-center tracking-widest">&gt; Executive Portrait</p>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

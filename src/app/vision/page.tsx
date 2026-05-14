@@ -45,9 +45,19 @@ export default function Vision() {
       </section>
 
       {/* Photos */}
-      <section className="px-6 max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img src="/photos/speaking-energy.png" alt="Speaking Energy" className="w-full aspect-[4/3] object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
-        <img src="/photos/boardroom-meeting.png" alt="Boardroom Meeting" className="w-full aspect-[4/3] object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
+      <section className="px-6 max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="space-y-4">
+          <img src="/photos/speaking-energy.png" alt="Speaking Energy" className="w-full aspect-[4/3] object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
+          <div className="font-mono text-[10px] md:text-xs text-brand-neon-green opacity-70 text-center uppercase tracking-widest">
+            &gt; Chairman, Innotech 4.0 Session
+          </div>
+        </div>
+        <div className="space-y-4">
+          <img src="/photos/boardroom-meeting.png" alt="Boardroom Meeting" className="w-full aspect-[4/3] object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
+          <div className="font-mono text-[10px] md:text-xs text-brand-neon-green opacity-70 text-center uppercase tracking-widest">
+            &gt; Leadership Strategy Sync
+          </div>
+        </div>
       </section>
 
     </div>

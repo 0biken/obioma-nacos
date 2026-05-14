@@ -20,8 +20,11 @@ export default function Home() {
             <br className="hidden md:block" />that support student growth, collaboration, and opportunity.
           </p>
         </div>
-        <div className="max-w-5xl mx-auto mt-12 md:mt-16 border border-brand-neon-green/10 rounded-[4px] p-1.5 md:p-2 bg-brand-bg-secondary">
+        <div className="max-w-5xl mx-auto mt-12 md:mt-16 border border-brand-neon-green/10 rounded-[4px] p-1.5 md:p-2 bg-brand-bg-secondary group">
           <img src="/photos/teaching-whiteboard.png" alt="Obioma Teaching" className="w-full aspect-[4/3] md:aspect-[21/9] object-cover rounded-[2px] opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
+          <div className="mt-4 font-mono text-[10px] md:text-xs text-brand-neon-green/60 uppercase tracking-widest text-center">
+            &gt; Empowering students through technical education
+          </div>
         </div>
       </section>
 
@@ -44,10 +47,13 @@ export default function Home() {
       <section className="relative w-full py-20 md:py-32 flex items-center justify-center overflow-hidden border-y border-brand-neon-green/10">
         <div className="absolute inset-0 bg-brand-bg-primary z-10 opacity-70" />
         <img src="/photos/nacos-team.jpg" alt="NACOS Team" className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40" />
-        <div className="relative z-20 px-6 text-center">
+        <div className="relative z-20 px-6 text-center space-y-6">
           <h2 className="font-orbitron font-bold text-2xl md:text-5xl text-brand-text-primary max-w-4xl mx-auto leading-tight">
             The future of <span className="text-brand-cyan">NACOS UI</span> is something we build together.
           </h2>
+          <div className="font-mono text-[10px] md:text-xs text-brand-neon-green uppercase tracking-[0.3em] opacity-80">
+            [ SECURING_THE_FUTURE.LOG ]
+          </div>
         </div>
       </section>
 
