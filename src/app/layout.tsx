@@ -42,9 +42,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-brand-bg-primary text-brand-text-primary font-sans relative selection:bg-brand-neon-green selection:text-brand-bg-primary">
         <PixelBackground />
         <Navbar />
-        <main className="flex-1 pb-20 md:pb-0">{children}</main>
-        <MobileNav />
+        <main className="flex-1">{children}</main>
         <Footer />
+        <MobileNav />
       </body>
     </html>
   );
