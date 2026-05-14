@@ -102,11 +102,6 @@ export default function Footer() {
                   WhatsApp Community ↗
                 </a>
               </li>
-              <li>
-                <Link href="/join" className="text-brand-text-muted hover:text-brand-cyan transition-colors">
-                  Volunteer / Support
-                </Link>
-              </li>
             </ul>
 
             {/* Status badge */}
