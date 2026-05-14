@@ -45,14 +45,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  // Prevent hydration mismatch by returning a fragment until mounted
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
+  // Prevent hydration mismatch by keeping initial theme state, but we MUST return the Provider
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
+      {/* Hide children until mounted to prevent hydration mismatch of CSS classes based on theme */}
+      <div style={{ visibility: mounted ? "visible" : "hidden", flex: 1, display: "flex", flexDirection: "column" }}>
+        {children}
+      </div>
     </ThemeContext.Provider>
   );
 }

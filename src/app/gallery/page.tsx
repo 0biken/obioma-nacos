@@ -1,4 +1,5 @@
 import PageHeader from "@/components/PageHeader";
+import Image from "next/image";
 
 interface GalleryImage {
   src: string;
@@ -79,12 +80,14 @@ export default function Gallery() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {section.images.map((img, index) => (
               <div key={index} className="group relative">
-                <div className="aspect-[4/3] overflow-hidden border border-brand-neon-green/10 rounded-[2px] bg-brand-bg-secondary hover:border-brand-neon-green/30 transition-colors duration-300">
-                  <img
+                <div className="aspect-[4/3] overflow-hidden border border-brand-neon-green/10 rounded-[2px] bg-brand-bg-secondary hover:border-brand-neon-green/30 transition-colors duration-300 relative">
+                  <Image
                     src={img.src}
                     alt={img.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                    fill
+                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                     style={{ objectPosition: img.position ?? "center center" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 <div className="mt-3 space-y-1 px-1">

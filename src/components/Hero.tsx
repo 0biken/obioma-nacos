@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import TypewriterText from "./TypewriterText";
 import NeonButton from "./NeonButton";
 
@@ -57,8 +58,15 @@ export default function Hero() {
               <div className="w-2 h-2 rounded-full bg-brand-neon-green" />
             </div>
             {/* We assume images are placed in public/images/ */}
-            <div className="w-full h-full bg-brand-bg-secondary pt-6 flex items-center justify-center">
-              <img src="/photos/hero-portrait.png" alt="Obioma Kennedy Ezeocha" className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500 opacity-80" />
+            <div className="w-full h-full bg-brand-bg-secondary pt-6 flex items-center justify-center relative">
+              <Image 
+                src="/photos/hero-portrait.png" 
+                alt="Obioma Kennedy Ezeocha" 
+                fill
+                priority
+                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-500 opacity-80" 
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>

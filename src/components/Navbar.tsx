@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav className="w-full border-b border-brand-neon-green/10 bg-brand-bg-primary/90 backdrop-blur-md sticky top-0 z-50 transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-[2px] overflow-hidden border border-brand-neon-green/20 transition-all group-hover:border-brand-cyan/50 group-hover:shadow-[0_0_15px_rgba(49,255,230,0.3)] bg-white flex items-center justify-center p-1">
+          <div className="w-10 h-10 rounded-[2px] overflow-hidden border border-brand-neon-green/20 transition-all group-hover:border-brand-cyan/50 group-hover:shadow-[0_0_15px_rgba(49,255,230,0.3)] flex items-center justify-center">
             <img src="/photos/Nacos_logo.jpg" alt="NACOS UI Logo" className="w-full h-full object-contain" />
           </div>
           <div>

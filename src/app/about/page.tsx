@@ -1,5 +1,6 @@
 import CommitTimeline from "@/components/CommitTimeline";
 import TerminalCard from "@/components/TerminalCard";
+import Image from "next/image";
 
 export default function About() {
   const values = [
@@ -53,7 +54,13 @@ export default function About() {
       <section className="px-6 max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
         <div className="relative aspect-[4/5] w-full max-w-sm mx-auto md:mx-0">
           <div className="absolute inset-0 bg-brand-neon-green/10 -translate-x-3 md:-translate-x-4 translate-y-3 md:translate-y-4 rounded-[4px] border border-brand-neon-green/30" />
-          <img src="/photos/relaxed-portrait.png" alt="Obioma Relaxed Portrait" className="relative w-full h-full object-cover rounded-[4px] grayscale hover:grayscale-0 transition-all duration-700" />
+          <Image 
+            src="/photos/relaxed-portrait.png" 
+            alt="Obioma Relaxed Portrait" 
+            fill
+            className="object-cover rounded-[4px] grayscale hover:grayscale-0 transition-all duration-700" 
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
         <div className="space-y-6 md:space-y-8">
           <div className="space-y-4">

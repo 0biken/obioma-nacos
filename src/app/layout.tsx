@@ -22,10 +22,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Obioma for NACOS UI President",
   description: "Official campaign website of Obioma Kennedy Ezeocha for NACOS UI President. Compiling the Future, for the good of NACOS.",
-  icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
-  },
 };
 
 import Navbar from "@/components/Navbar";

@@ -1,5 +1,6 @@
 "use client";
 import NeonButton from "@/components/NeonButton";
+import Image from "next/image";
 
 export default function Join() {
   return (
@@ -24,11 +25,27 @@ export default function Join() {
       {/* Community Photo */}
       <section className="px-6 max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
         <div className="space-y-4">
-          <img src="/photos/nacos-team.jpg" alt="NACOS Team" className="w-full aspect-video object-cover rounded-[2px] grayscale hover:grayscale-0 transition-all duration-500 border border-brand-neon-green/10" />
+          <div className="relative w-full aspect-video border border-brand-neon-green/10 rounded-[2px] overflow-hidden">
+            <Image 
+              src="/photos/nacos-team.jpg" 
+              alt="NACOS Team" 
+              fill
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-500" 
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
           <p className="font-mono text-[10px] text-brand-neon-green/60 uppercase text-center tracking-widest">&gt; Community Spirit @ NACOS UI</p>
         </div>
         <div className="space-y-4">
-          <img src="/photos/volunteer-group.png" alt="Volunteer Group" className="w-full aspect-video object-cover rounded-[2px] grayscale hover:grayscale-0 transition-all duration-500 border border-brand-neon-green/10" />
+          <div className="relative w-full aspect-video border border-brand-neon-green/10 rounded-[2px] overflow-hidden">
+            <Image 
+              src="/photos/volunteer-group.png" 
+              alt="Volunteer Group" 
+              fill
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-500" 
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
           <p className="font-mono text-[10px] text-brand-neon-green/60 uppercase text-center tracking-widest">&gt; Community Engagement</p>
         </div>
       </section>
