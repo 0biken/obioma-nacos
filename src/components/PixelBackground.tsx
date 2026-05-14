@@ -74,16 +74,53 @@ export default function PixelBackground() {
         <div className="bg-brand-neon-green/20"></div>
       </div>
       
-      <div className="fixed bottom-[15%] right-[10%] w-12 h-12 bg-transparent grid grid-cols-3 grid-rows-3 gap-[2px] pointer-events-none z-0 opacity-40">
+      <div className="fixed top-[5%] right-[20%] w-24 h-12 bg-transparent grid grid-cols-4 grid-rows-2 gap-[2px] pointer-events-none z-0 opacity-40">
+        <div className="bg-brand-neon-green/30"></div>
         <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/30"></div>
+        <div className="bg-brand-neon-green/20"></div>
+      </div>
+
+      <div className="fixed bottom-[15%] right-[5%] w-16 h-16 bg-transparent grid grid-cols-3 grid-rows-3 gap-[2px] pointer-events-none z-0 opacity-40">
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/30"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/30"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/20"></div>
+      </div>
+
+      <div className="fixed top-[40%] right-[2%] w-12 h-20 bg-transparent grid grid-cols-2 grid-rows-4 gap-[2px] pointer-events-none z-0 opacity-30">
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/30"></div>
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-transparent"></div>
+      </div>
+
+      <div className="fixed bottom-[10%] left-[10%] w-16 h-12 bg-transparent grid grid-cols-4 grid-rows-3 gap-[2px] pointer-events-none z-0 opacity-20">
+        <div className="bg-transparent"></div>
+        <div className="bg-brand-neon-green/30"></div>
+        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-transparent"></div>
         <div className="bg-brand-neon-green/20"></div>
         <div className="bg-transparent"></div>
         <div className="bg-transparent"></div>
         <div className="bg-brand-neon-green/20"></div>
         <div className="bg-brand-neon-green/20"></div>
-        <div className="bg-brand-neon-green/20"></div>
         <div className="bg-transparent"></div>
-        <div className="bg-brand-neon-green/20"></div>
+        <div className="bg-brand-neon-green/30"></div>
+        <div className="bg-transparent"></div>
       </div>
     </>
   );
