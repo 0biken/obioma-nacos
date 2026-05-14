@@ -32,6 +32,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PixelBackground from "@/components/PixelBackground";
 import MobileNav from "@/components/MobileNav";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export default function RootLayout({
   children,
@@ -42,13 +43,16 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${orbitron.variable} ${jetBrainsMono.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-brand-bg-primary text-brand-text-primary font-sans relative selection:bg-brand-neon-green selection:text-brand-bg-primary">
-        <PixelBackground />
-        <Navbar />
-        <main className="flex-1 relative z-10">{children}</main>
-        <Footer />
-        <MobileNav />
+        <ThemeProvider>
+          <PixelBackground />
+          <Navbar />
+          <main className="flex-1 relative z-10">{children}</main>
+          <Footer />
+          <MobileNav />
+        </ThemeProvider>
       </body>
     </html>
   );

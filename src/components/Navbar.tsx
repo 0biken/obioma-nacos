@@ -2,11 +2,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const links = [
     { name: "Home", href: "/" },
@@ -18,7 +20,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full border-b border-brand-neon-green/10 bg-brand-bg-primary/90 backdrop-blur-md sticky top-0 z-50">
+    <nav className="w-full border-b border-brand-neon-green/10 bg-brand-bg-primary/90 backdrop-blur-md sticky top-0 z-50 transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-[2px] overflow-hidden border border-brand-neon-green/20 transition-all group-hover:border-brand-cyan/50 group-hover:shadow-[0_0_15px_rgba(49,255,230,0.3)] bg-white flex items-center justify-center p-1">
@@ -43,6 +45,13 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
+          <button 
+            onClick={toggleTheme} 
+            className="ml-2 text-brand-text-muted hover:text-brand-neon-green transition-colors flex items-center justify-center"
+            title="Toggle Light/Dark Mode"
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <Link
             href="/join"
             className="ml-4 font-mono text-xs text-brand-bg-primary bg-brand-neon-green px-4 py-2 rounded-[2px] transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,102,0.4)]"
@@ -53,6 +62,12 @@ export default function Navbar() {
 
         {/* Mobile Actions */}
         <div className="flex items-center gap-4 md:hidden">
+          <button 
+            onClick={toggleTheme} 
+            className="text-brand-text-muted hover:text-brand-neon-green transition-colors"
+          >
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
           <Link
             href="/join"
             className="font-mono text-[10px] text-brand-bg-primary bg-brand-neon-green px-3 py-2 rounded-[2px] font-bold shadow-[0_0_10px_rgba(0,255,102,0.3)]"

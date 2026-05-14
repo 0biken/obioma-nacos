@@ -34,7 +34,7 @@ const sections: { heading: string; images: GalleryImage[] }[] = [
       { src: "/photos/teaching-whiteboard.png", title: "Technical Education", desc: "Empowering students through hands-on knowledge sharing" },
       { src: "/photos/gitex-agentspace.png", title: "Agentspace Summit", desc: "Industry-level collaborations at the world's largest tech event", position: "center top" },
       { src: "/photos/gitex-selfie.png", title: "International Exposure", desc: "Seizing global opportunities — one event at a time" },
-      { src: "/photos/gitex-sign.png", title: "Global Representation", desc: "Proudly standing on the global stage — GITEX, Dubai", position: "center 25%" },
+      { src: "/photos/gitex-sign.png", title: "Global Representation", desc: "Proudly standing on the global stage — GITEX, Dubai", position: "top" },
       { src: "/photos/innovators-magazine.png", title: "Innovators Magazine", desc: "Featured in student innovators publication" },
       { src: "/photos/itconnect-feature.png", title: "ITConnect Feature", desc: "Featured on ITConnect — bridging tech and real life, one connection at a time" },
     ],
