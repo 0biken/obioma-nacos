@@ -49,7 +49,7 @@ export default function Vision() {
         <div className="space-y-4">
           <img src="/photos/speaking-energy.png" alt="Speaking Energy" className="w-full aspect-[4/3] object-cover rounded-[2px] border border-brand-neon-green/10 grayscale hover:grayscale-0 transition-all duration-500" />
           <div className="font-mono text-[10px] md:text-xs text-brand-neon-green opacity-70 text-center uppercase tracking-widest">
-            &gt; Chairman, Innotech 4.0 Session
+            &gt; Chairman, Innotech 4.0 Session. Speaking Session at the Energy Club UI
           </div>
         </div>
         <div className="space-y-4">

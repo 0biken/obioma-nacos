@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, User, Lightbulb, FileText, Users } from "lucide-react";
+import { Home, User, Lightbulb, FileText, Users, Image as ImageIcon } from "lucide-react";
 
 export default function MobileNav() {
   const pathname = usePathname();
@@ -10,6 +10,7 @@ export default function MobileNav() {
     { name: "Home", href: "/", icon: Home },
     { name: "About", href: "/about", icon: User },
     { name: "Vision", href: "/vision", icon: Lightbulb },
+    { name: "Gallery", href: "/gallery", icon: ImageIcon },
     { name: "Plans", href: "/plans", icon: FileText },
     { name: "Join", href: "/join", icon: Users },
   ];

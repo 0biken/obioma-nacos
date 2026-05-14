@@ -77,7 +77,7 @@ export default function Join() {
         </div>
         <div className="space-y-4">
           <img src="/photos/volunteer-group.png" alt="Volunteer Group" className="w-full aspect-video object-cover rounded-[2px] grayscale hover:grayscale-0 transition-all duration-500 border border-brand-neon-green/10" />
-          <p className="font-mono text-[10px] text-brand-neon-green/60 uppercase text-center tracking-widest">&gt; Campaign Mobilization Team</p>
+          <p className="font-mono text-[10px] text-brand-neon-green/60 uppercase text-center tracking-widest">&gt; Community Engagement</p>
         </div>
       </section>
     </div>
