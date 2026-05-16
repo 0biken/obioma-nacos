@@ -34,7 +34,7 @@ export default function TypewriterText({ text, speed = 150, delay = 0, onComplet
       clearTimeout(timeout);
       clearInterval(interval);
     };
-  }, [text, speed, delay, onComplete]);
+  }, [text, speed, delay]);
 
   return <span className={className}>{displayedText}</span>;
 }
